@@ -17,7 +17,7 @@ getgenv().Settings = {
     TypeTime = 10
 }
 
-local Response = game:HttpGet("https://raw.githubusercontent.com/FoeHub/Open-Source/main/Words.txt")
+local Response = game:HttpGet("https://raw.githubusercontent.com/LOAKS-HUB/Open-Source/main/Words.txt")
 local Words = {}
 
 for line in string.gmatch(Response,"[^\r\n]*") do
@@ -25,7 +25,7 @@ for line in string.gmatch(Response,"[^\r\n]*") do
     end
 end
 
-local Response = game:HttpGet("https://raw.githubusercontent.com/FoeHub/Open-Source/main/LongWords.txt")
+local Response = game:HttpGet("https://raw.githubusercontent.com/LOAKS-HUB/Open-Source/main/LongWords.txt")
 local LongWords = {}
 
 for line in string.gmatch(Response,"[^\r\n]*") do
@@ -179,7 +179,7 @@ end)
 local toggle = sec:Toggle("Long Words Only", nil,"Settings.LongWords", function(Value)
 Settings.LongWords = Value
 end)
-local slider = sec:Slider("Slider", 2,25,2,2.5,"", function(Value)
+local slider = sec:Slider("Type Speed", 2,25,2,2.5,"", function(Value)
 Settings.TypeTime = Value
 end)
 local sec = tab:Section("Server")
